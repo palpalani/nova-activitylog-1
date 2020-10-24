@@ -11,6 +11,7 @@
 
 namespace Bolechen\NovaActivitylog\Resources;
 
+use ChrisWare\NovaBreadcrumbs\Traits\Breadcrumbs;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Code;
 use Laravel\Nova\Fields\DateTime;
@@ -21,6 +22,8 @@ use Laravel\Nova\Resource as NovaResource;
 
 class Activitylog extends NovaResource
 {
+    use Breadcrumbs;
+    
     public static $model;
 
     /**
